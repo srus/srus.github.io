@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "name": "Sergio Rus",
+  "launch_path": "/index.html",
+  "description": "Sergio Rus personal website",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Sergio Rus",
+    "url": "https://www.sergiorus.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {},
+  "locales": {
+    "en": {
+      "name": "Sergio Rus",
+      "description": "Sergio Rus personal website"
+    }
+  }
+}

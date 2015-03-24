@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+Last update: 2015/03/19
+
+# TEAM
+
+  Developer: Sergio Rus <sergio [at] sergiorus.com>
+  Twitter: @sergiorus
+  From: Sevilla, Andalucía, Spain
+
+# TECHNOLOGY COLOPHON
+
+  OS: Linux (Ubuntu)
+  Editor: Sublime Text
+  Project skeleton: web-kickstartvenv https://github.com/srus/web-kickstartvenv
+  Front-end Framework: Google Web Starter Kit https://github.com/google/web-starter-kit
+  Technologies: HTML5, CSS3, JavaScript, Sass, Gulp, Virtualenv, Nodeenv, NVM,
+                RVM, Node.js, Ruby, Python, Gimp, Inkscape.
+  Other tools:
+    SVGOMG: https://jakearchibald.github.io/svgomg/
+    Google Fonts: http://www.google.com/fonts
