@@ -16,4 +16,4 @@
  *  limitations under the License
  *
  */
-!function(){"use strict";function e(){n.classList.toggle("open"),i.classList.toggle("open"),c.classList.toggle("ui-mask-visible")}function t(){n.classList.remove("open"),i.classList.remove("open"),c.classList.remove("ui-mask-visible")}var s=document.querySelector.bind(document),n=document.body,i=s(".nav"),o=s(".menu"),c=s(".ui-mask-modal");o.addEventListener("click",e),c.addEventListener("click",e),i.addEventListener("click",function(e){("A"===e.target.nodeName||"LI"===e.target.nodeName)&&t()})}();
+!function(){"use strict";function e(){n.classList.toggle("open"),i.classList.toggle("open"),i.classList.add("opened"),c.classList.toggle("ui-mask-visible")}function s(){n.classList.remove("open"),i.classList.remove("open"),c.classList.remove("ui-mask-visible")}var t=document.querySelector.bind(document),n=document.body,i=t(".nav"),o=t(".menu"),c=t(".ui-mask-modal");o.addEventListener("click",e),c.addEventListener("click",e),i.addEventListener("click",function(e){("A"===e.target.nodeName||"LI"===e.target.nodeName)&&s()})}();

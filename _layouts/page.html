@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<header class="header page-header">
+  <div class="page-title">
+    <h1 itemprop="headline">{{ page.title }}</h1>
+  </div>
+</header>
+
+<main class="page-content" role="main">
+  <section class="page-body" {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+    {% if page.schema_type == nil and page.date %}
+      <div class="datetime">
+        {% capture duration %}{{ content | number_of_words | divided_by: 200 }}{% endcapture %}
+        {% if duration != '0' %}<span>{{ duration }} min read</span>{% endif %}<time datetime="{{ page.date | date: '%F' }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
+      </div>
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.last_update %}
+      <small class="footnote">Last update: <time datetime="{{ page.last_update }}" itemprop="dateModified">{{ page.last_update }}</time></small>
+    {% endif %}
+    {% if page.schema_type == nil and page.date %}
+      <div class="social">
+        <div class="twitter">
+          <a class="twitter-share-button" href="https://twitter.com/share" data-size="medium">Tweet</a>
+          <script>
+            window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+          </script>
+        </div>
+        <div class="google">
+          <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
+          <script>
+            (function() {
+              var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/platform.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+        </div>
+      </div>
+      <div class="comments">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_shortname = 'sergiorus';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+    {% endif %}
+  </section>
+</main>
+
+<footer class="footer page-footer">
+  <small>Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License.</small>
+</footer>

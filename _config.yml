@@ -1,0 +1,21 @@
+title: "Sergio Rus"
+description: "Hi, I'm Sergio. I'm a software engineer really excited about the Web Platform and web performance."
+url: "https://www.sergiorus.com"
+schema_type: "https://schema.org/BlogPosting"
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "page"
+paginate: 10
+paginate_path: "/blog/page:num/"
+permalink: "/blog/:title-:year:month:day/"
+highlighter: "pygments"
