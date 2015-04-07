@@ -9,21 +9,23 @@ layout: default
 </header>
 
 <main class="page-content" role="main">
-  <section class="page-body" {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+  <section class="page-body">
     {% if page.schema_type == nil and page.date %}
-      <div class="datetime">
+      <section class="datetime">
         {% capture duration %}{{ content | number_of_words | divided_by: 200 }}{% endcapture %}
         {% if duration != '0' %}<span>{{ duration }} min read</span>{% endif %}<time datetime="{{ page.date | date: '%F' }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
-      </div>
+      </section>
     {% endif %}
 
-    {{ content }}
+    <section {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+      {{ content }}
+    </section>
 
     {% if page.last_update %}
       <small class="footnote">Last update: <time datetime="{{ page.last_update }}" itemprop="dateModified">{{ page.last_update }}</time></small>
     {% endif %}
     {% if page.schema_type == nil and page.date %}
-      <div class="social">
+      <section class="social">
         <div class="twitter">
           <a class="twitter-share-button" href="https://twitter.com/share" data-size="medium">Tweet</a>
           <script>
@@ -40,8 +42,8 @@ layout: default
             })();
           </script>
         </div>
-      </div>
-      <div class="comments">
+      </section>
+      <section class="comments">
         <div id="disqus_thread"></div>
         <script>
             var disqus_shortname = 'sergiorus';
@@ -52,7 +54,7 @@ layout: default
             })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-      </div>
+      </section>
     {% endif %}
   </section>
 </main>
