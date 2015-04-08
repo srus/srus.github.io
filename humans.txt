@@ -1,7 +1,7 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-Last update: 2015/03/19
+Last update: 2015/04/08
 
 # TEAM
 
@@ -14,9 +14,10 @@ Last update: 2015/03/19
   OS: Linux (Ubuntu)
   Editor: Sublime Text
   Project skeleton: web-kickstartvenv https://github.com/srus/web-kickstartvenv
-  Front-end Framework: Google Web Starter Kit https://github.com/google/web-starter-kit
+  Back-end framework: Jekyll http://jekyllrb.com
+  Front-end framework: Google Web Starter Kit https://github.com/google/web-starter-kit
   Technologies: HTML5, CSS3, JavaScript, Sass, Gulp, Virtualenv, Nodeenv, NVM,
                 RVM, Node.js, Ruby, Python, Gimp, Inkscape.
   Other tools:
-    SVGOMG: https://jakearchibald.github.io/svgomg/
+    SVGOMG: https://jakearchibald.github.io/svgomg
     Google Fonts: http://www.google.com/fonts
