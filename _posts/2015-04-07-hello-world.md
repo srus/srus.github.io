@@ -7,7 +7,6 @@ description: Hello world post.
 
 This is a "hello world" post just to test [Jekyll](http://jekyllrb.com/) on [GitHub Pages](https://pages.github.com/), my [new blogging platform](https://github.com/srus/srus.github.io).
 
-{% highlight javascript %}
+```js
 var jekyll = 'GitHub Pages';
-{% endhighlight %}
-
+```
