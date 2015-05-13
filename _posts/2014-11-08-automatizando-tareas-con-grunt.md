@@ -14,11 +14,11 @@ Efectivamente, [Grunt](http://gruntjs.com/) es una utilidad para **automatizar t
 En Grunt podemos distinguir cuatro elementos principales:
 
 - **Grunt CLI (_Command Line Interface_)**: La utilidad de shell para manejar Grunt.
-- **Grunt _task runner_**: El encargado de cargar y ejecutar las tareas.
+- **Grunt task runner**: El encargado de cargar y ejecutar las tareas.
 - **Gruntfile**: El script donde especificamos y configuramos las tareas.
 - **Plugins**: Cada plugin de Grunt normalmente sólo sirve para una tarea específica. Básicamente nos limitaremos a instalar, configurar y combinar plugins para realizar las tareas que queremos.
 
-Para instalar Grunt necesitamos instalar **Grunt CLI** y **Grunt _task runner_**. Dado que Grunt corre sobre [Node.js](http://nodejs.org/), usaremos [npm](https://www.npmjs.org/) para instalar los paquetes.
+Para instalar Grunt necesitamos instalar **Grunt CLI** y **Grunt task runner**. Dado que Grunt corre sobre [Node.js](http://nodejs.org/), usaremos [npm](https://www.npmjs.org/) para instalar los paquetes.
 
 ### Instalación de Grunt CLI
 
@@ -30,9 +30,9 @@ $ npm install -g grunt-cli
 
 Aunque también podríamos instalarlo sólo a nivel de proyecto, en cuyo caso se instalará en la ruta `<ruta_proyecto>/node_modules/.bin/grunt`.
 
-En cualquier caso, Grunt CLI puede manejar diferentes versiones de Grunt _task runner_, ya que Grunt CLI es sólo una _interface_ hacia Grunt _task runner_. Esto es, podemos tener instalada una versión diferente de Grunt _task runner_ para cada proyecto, mientras que sólo necesitamos un único Grunt CLI instalado en el sistema.
+En cualquier caso, Grunt CLI puede manejar diferentes versiones de Grunt task runner, ya que Grunt CLI es sólo una _interface_ hacia Grunt task runner. Esto es, podemos tener instalada una versión diferente de Grunt task runner para cada proyecto, mientras que sólo necesitamos un único Grunt CLI instalado en el sistema.
 
-### Instalación de Grunt _task runner_
+### Instalación de Grunt task runner
 
 Supongamos que tenemos un proyecto "demo" con la siguiente estructura:
 
@@ -52,11 +52,9 @@ demo/
 └── package.json
 ```
 
-Normalmente Grunt _task runner_ lo instalaremos como una dependencia más de nuestro proyecto, en concreto como una dependencia para _entorno de desarrollo_, por lo que al instalarlo usaremos la opción `--save-dev`, para que aparezca en la sección `devDependencies` de nuestro `package.json`:
+Normalmente Grunt task runner lo instalaremos como una dependencia más de nuestro proyecto, en concreto como una dependencia para **entorno de desarrollo**, por lo que al instalarlo usaremos la opción `--save-dev`, para que aparezca en la sección `devDependencies` de nuestro `package.json`:
 
-```
-$ npm install --save-dev grunt
-```
+`$ npm install --save-dev grunt`
 
 ```json
 {
@@ -162,7 +160,7 @@ En Grunt la mayor parte de las tareas, si no todas, están relacionadas con arch
 - __Procesan__ estos archivos
 - __Escriben__ un conjunto de archivos de salida
 
-Las acciones que se realicen dependerá del tipo de tarea. Por ejemplo, una tarea que compruebe errores sintácticos sólo realizará las dos primeras acciones: _leer_ archivos y _procesar_ archivos. En nuestro caso, las tareas __concat__ y __uglify__ realizan las tres acciones.
+Las acciones que se realicen dependerá del tipo de tarea. Por ejemplo, una tarea que compruebe errores sintácticos sólo realizará las dos primeras acciones: __leer__ archivos y __procesar__ archivos. En nuestro caso, las tareas __concat__ y __uglify__ realizan las tres acciones.
 
 Por otro lado, cada tarea siempre contiene una o varias __subtareas__, también llamadas **_targets_**:
 

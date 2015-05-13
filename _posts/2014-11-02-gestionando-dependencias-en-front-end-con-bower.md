@@ -6,11 +6,11 @@ description: Pequeña introducción al gestor de paquetes Bower.
 _Esta es una copia de mi artículo [publicado en OpenWebinars](https://openwebinars.net/gestionando-dependencias-en-front-end-con-bower/)_.
 
 [__Bower__](http://bower.io/) es un __gestor de paquetes__. Si alguna vez has usado [apt-get](http://en.wikipedia.org/wiki/Advanced_Packaging_Tool), [npm](http://en.wikipedia.org/wiki/Npm_(software)), [pip](http://en.wikipedia.org/wiki/Pip_(package_manager)) o [gem](http://en.wikipedia.org/wiki/RubyGems), felicidades, ya sabes lo que es un gestor de paquetes.
-Lo que hace a Bower diferente del resto es que es un gestor de paquetes para el _front-end_, algo impensable hasta hace apenas dos años.
+Lo que hace a Bower diferente del resto es que es un gestor de paquetes para el front-end, algo impensable hasta hace apenas dos años.
 
 Con Bower podemos gestionar cómodamente las __dependencias__ de nuestro proyecto desde la __shell__. Se acabaron los días en que tenías que ir visitando una por una las webs de tus bibliotecas JavaScript/CSS favoritas para comprobar o descargar la última versión de las mismas.
 
-Por _dependencia_ se entiende cualquier biblioteca, framework o conjunto de archivos susceptible de ser encapsulado como paquete (siguiendo [las especificaciones de Bower](https://github.com/bower/bower.json-spec)). De hecho, aunque la gran mayoría están relacionados con el front-end, se pueden encontrar casi todo tipo de paquetes (¡incluso hasta [el código fuente del kernel de Linux](http://bower.io/search/?q=linux)!). En principio Bower no impone ninguna restricción en cuanto a la naturaleza de los paquetes, siempre que éstos se alojen en un repositorio [Git](http://git-scm.com/), como por ejemplo [GitHub](https://github.com/).
+Por dependencia se entiende cualquier biblioteca, framework o conjunto de archivos susceptible de ser encapsulado como paquete (siguiendo [las especificaciones de Bower](https://github.com/bower/bower.json-spec)). De hecho, aunque la gran mayoría están relacionados con el front-end, se pueden encontrar casi todo tipo de paquetes (¡incluso hasta [el código fuente del kernel de Linux](http://bower.io/search/?q=linux)!). En principio Bower no impone ninguna restricción en cuanto a la naturaleza de los paquetes, siempre que éstos se alojen en un repositorio [Git](http://git-scm.com/), como por ejemplo [GitHub](https://github.com/).
 
 ## Instalación de Bower
 
@@ -64,7 +64,7 @@ Para instalar el paquete __bootstrap__ usamos el comando `ìnstall`:
 $ bower install bootstrap
 ```
 
-Esto instalará _bootstrap_ y todas sus dependencias (en este caso sólo _jQuery_). Además nos habrá creado un nuevo directorio: **bower_components**, donde se descargarán todos los paquetes que instalemos. Es recomendable ignorar este directorio en el [sistema de control de versiones](http://es.wikipedia.org/wiki/Sistema_de_control_de_versiones) que estemos usando, por ejemplo añadiéndolo a `.gitignore`, en el caso de Git.
+Esto instalará Bootstrap y todas sus dependencias (en este caso sólo jQuery). Además nos habrá creado un nuevo directorio: **bower_components**, donde se descargarán todos los paquetes que instalemos. Es recomendable ignorar este directorio en el [sistema de control de versiones](http://es.wikipedia.org/wiki/Sistema_de_control_de_versiones) que estemos usando, por ejemplo añadiéndolo a `.gitignore`, en el caso de Git.
 
 Por defecto el comando `install` instala la última versión del paquete. Para instalar una versión concreta escribiríamos:
 
@@ -95,11 +95,11 @@ demo/
 └── index.html
 ```
 
-Una de las ventajas de usar Bower es que podemos especificar las dependencias front-end de nuestro proyecto en un archivo especial llamado **bower.json** (análogo al que se usa en Node.js: *package.json*). De esta forma cada vez que vayamos a desplegar nuestro proyecto, sólo tendremos que escribir `bower install` para que se instalen automáticamente todos los paquetes de Bower.
+Una de las ventajas de usar Bower es que podemos especificar las dependencias front-end de nuestro proyecto en un archivo especial llamado `bower.json` (análogo al que se usa en Node.js: `package.json`). De esta forma cada vez que vayamos a desplegar nuestro proyecto, sólo tendremos que escribir `bower install` para que se instalen automáticamente todos los paquetes de Bower.
 
-Con **bower.json** no sólo estamos indicando las dependencias de nuestro proyecto, sino que **estamos creando un paquete Bower**. Por ello, el formato de este archivo debe seguir [las especificaciones de los paquetes de Bower](https://github.com/bower/bower.json-spec).
+Con `bower.json` no sólo estamos indicando las dependencias de nuestro proyecto, sino que **estamos creando un paquete Bower**. Por ello, el formato de este archivo debe seguir [las especificaciones de los paquetes de Bower](https://github.com/bower/bower.json-spec).
 
-La forma más sencilla de crear el archivo *bower.json* es mediante el comando `bower init`, el cual nos guiará paso a paso por todos los campos que necesitamos rellenar. No todos los campos son obligatorios, por lo que si no queremos rellenarlo, sólo tendremos que pulsar _enter_:
+La forma más sencilla de crear el archivo `bower.json` es mediante el comando `bower init`, el cual nos guiará paso a paso por todos los campos que necesitamos rellenar. No todos los campos son obligatorios, por lo que si no queremos rellenarlo, sólo tendremos que pulsar _enter_:
 
 ```
 $ bower init
@@ -175,7 +175,7 @@ De esta forma Bower añadirá automáticamente estos paquetes a **bower.json**:
 
 Como se puede ver, Bower ha creado una nueva sección: `dependencies`, donde aparecen los tres paquetes que hemos instalado. La próxima vez que tengamos que desplegar el proyecto, sólo tendremos que escribir `bower install`, y todas las dependencias se instalarán automáticamente.
 
-Por defecto Bower especifica la versión de cada paquete usando el prefijo `~`. Este símbolo, que forma parte de la [notación usada en Node.js](https://www.npmjs.org/doc/misc/semver.html), indica a Bower que sólo debe instalar versiones compatibles *__a nivel de parche__*, es decir, que sólo corrijan errores y no introduzcan cambios incompatibles con las versiones instaladas actualmente (ver [_Semantic Versioning_](http://semver.org/)). Por ejemplo, en el caso de _bootstrap_, Bower sólo instalará una versión __mayor o igual__ que `3.3.0` y __menor__ que `3.4.0`.
+Por defecto Bower especifica la versión de cada paquete usando el prefijo `~`. Este símbolo, que forma parte de la [notación usada en Node.js](https://www.npmjs.org/doc/misc/semver.html), indica a Bower que sólo debe instalar versiones compatibles __a nivel de parche__, es decir, que sólo corrijan errores y no introduzcan cambios incompatibles con las versiones instaladas actualmente (ver [_Semantic Versioning_](http://semver.org/)). Por ejemplo, en el caso de Bootstrap, Bower sólo instalará una versión __mayor o igual__ que `3.3.0` y __menor__ que `3.4.0`.
 
 Finalmente sólo faltaría modificar `index.html` para añadir las bibliotecas JavaScript y CSS de nuestro proyecto:
 
