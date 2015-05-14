@@ -71,9 +71,9 @@ Si a continuación escribimos:
 
 Git nos indicará que estamos actualmente en la rama `foobar`. A partir de ahora todos los cambios y commits que hagamos se irán almacenando en esta rama del proyecto, sin afectar a la rama principal (`master`), teniendo por tanto dos líneas de desarrollo diferentes e independientes. Aunque podríamos tener muchas más.
 
-Una vez que decidamos incluir en la versión estable todos los cambios introducidos en la versión `foobar`, sólo habrá que hacer una **fusión** de ambas ramas. Para ello usaremos el comando **merge**.
+Una vez que decidamos incluir en la versión estable todos los cambios introducidos en la versión `foobar`, sólo habrá que hacer una **fusión** de ambas ramas. Para ello usaremos el comando `merge`.
 
-Para hacer un _merge_ de la rama `foobar` con la `master`, primero nos cambiamos a la rama `master`:
+Para hacer un `merge` de la rama `foobar` con la `master`, primero nos cambiamos a la rama `master`:
 
 `git checkout master`
 

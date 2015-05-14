@@ -3,7 +3,7 @@ title: La sinergia
 description: La sinergia.
 ---
 
-El otro día alguien preguntaba qué era la **sinergia**. Pues esta es una respuesta que se me ocurrió esta mañana mientras desayunaba:
+El otro día alguien preguntaba qué era la **sinergia**. Esta es una respuesta que se me ocurrió esta mañana mientras desayunaba:
 
 > Imagina el sabor del _huevo_.  
 > El sabor del _azúcar_.  

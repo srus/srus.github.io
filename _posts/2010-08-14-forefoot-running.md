@@ -9,7 +9,7 @@ Se recomienda a los que empiezan con esta técnica correr un rato descalzo, ya q
 
 En la Universidad de Harvard hay un [grupo de investigación](http://www.barefootrunning.fas.harvard.edu/index.html) que ha realizado varios estudios sobre este tema. Sobre todo se centran en analizar la técnica _barefoot_ (descalzo). En la web tienen análisis y vídeos explicativos que están muy bien.
 
-Hoy en día la mayoría de las zapatillas están diseñadas para pisada con talón (_heel strike_). El problema es que para suavizar el impacto del talón con el suelo, las zapatillas suelen venir con un talón muy voluminoso, y esto puede llegar a ser muy incómodo si se quiere correr con la técnica _forefoot._ Por ello sería interesante correr con zapatillas que no tengan demasiado talón. 
+Hoy en día la mayoría de las zapatillas están diseñadas para pisada con talón (_heel strike_). El problema es que para suavizar el impacto del talón con el suelo, las zapatillas suelen venir con un talón muy voluminoso, y esto puede llegar a ser muy incómodo si se quiere correr con la técnica _forefoot._ Por ello sería recomendable correr con zapatillas que no tengan demasiado talón. 
 
 Como es lógico, cambiar la forma de correr exige un tiempo, normalmente varias semanas. Al fin y al cabo se trata de un cambio radical, profundo, que afecta a la biomécanica del cuerpo, y eso lógicamente requiere de un tiempo para desaprender y volver a aprender.
 

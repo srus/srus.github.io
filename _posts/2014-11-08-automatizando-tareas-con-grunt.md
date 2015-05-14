@@ -152,7 +152,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 Estos plugins nos proporcionan las tareas **concat** y **uglify**, respectivamente.
 
-### Configuración de tareas y _targets_
+### Configuración de tareas y subtareas
 
 En Grunt la mayor parte de las tareas, si no todas, están relacionadas con archivos. Por lo general las tareas:
 
@@ -221,7 +221,7 @@ grunt.initConfig({
 });
 ```
 
-Ahora `concat` tiene dos targets. Además en el segundo target hemos añadido una nueva sección: `options`. Estas son opciones de configuración que dependen del plugin que estemos usando. En este caso estamos indicando que los archivos JavaScript se concatenen usando el símbolo `;` como separador.
+Ahora `concat` tiene dos subtareas. Además en el segundo target hemos añadido una nueva sección: `options`. Estas son opciones de configuración que dependen del plugin que estemos usando. En este caso estamos indicando que los archivos JavaScript se concatenen usando el símbolo `;` como separador.
 
 Las opciones de configuración también se pueden especificar a nivel de tarea. En ese caso por defecto afectarían a todas las subtareas, a menos que una subtarea incluya sus propias opciones de configuración, en cuyo caso éstas tendrían preferencia.
 
@@ -258,7 +258,7 @@ Esta vez hemos añadido opciones de configuración a la tarea `uglify`. En este 
 
 #### Plantillas y directorios de salida
 
-Es una práctica común que los archivos de salida se almacenen en un directorio aparte, para evitar que sobreescriban otros archivos. Esto podemos hacerlo indicando la ruta del directorio de salida en cada uno de los targets. Para evitar errores, y aplicando [uno de los principios más importantes de la programación](http://en.wikipedia.org/wiki/Don't_repeat_yourself), lo más recomendable es guardar el nombre del directorio como una propiedad más del objeto:
+Es una práctica común que los archivos de salida se almacenen en un directorio aparte, para evitar que sobreescriban otros archivos. Esto podemos hacerlo indicando la ruta del directorio de salida en cada uno de las subtareas. Para evitar errores, y aplicando [uno de los principios más importantes de la programación](http://en.wikipedia.org/wiki/Don't_repeat_yourself), lo más recomendable es guardar el nombre del directorio como una propiedad más del objeto:
 
 ```javascript
 grunt.initConfig({
@@ -290,7 +290,7 @@ grunt.initConfig({
 
 Como vemos, hemos definido una nueva propiedad `outdir` para almacenar el nombre del directorio de salida: `dist`. Y luego usando el [sistema de plantillas](http://gruntjs.com/configuring-tasks#templates) incluido en Grunt, hemos reescrito las rutas de salida de cada target con `<%= outdir %>`.
 
-### Ejecución de tareas y _targets_
+### Ejecución de tareas y subtareas
 
 Finalmente definimos cúal sería la tarea por defecto de Grunt:
 

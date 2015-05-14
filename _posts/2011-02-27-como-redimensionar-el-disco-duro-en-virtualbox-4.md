@@ -1,6 +1,6 @@
 ---
-title: Cómo redimensionar el disco duro de una máquina en VirtualBox 4
-description: Cómo redimensionar el disco duro de una máquina en VirtualBox 4.
+title: Cómo redimensionar el disco duro en VirtualBox 4
+description: Cómo redimensionar el disco duro en VirtualBox 4.
 ---
 
 Partimos de un disco duro en formato [VMDK](http://en.wikipedia.org/wiki/Vmdk) con Windows instalado. Lo primero, como siempre, será guardar una copia por si acaso ocurriera algo. Por ejemplo, [exportando](http://www.comtecknet.com/2010/08/25/exportar-nuestras-maquinas-virtuales-en-virtualbox/) la máquina.
@@ -8,7 +8,7 @@ Partimos de un disco duro en formato [VMDK](http://en.wikipedia.org/wiki/Vmdk) c
 A partir de la versión 4 de VirtualBox ya es posible redimensionar los discos duros, pero sólo si:
 
 * El Almacenamiento está en modo Expansión Dinámica.
-* El Formato del disco duro es [VDI](http://en.wikipedia.org/wiki/VDI_(file_format)#VirtualBox_and_VDI) o [VHD](http://en.wikipedia.org/wiki/VHD_(file_format)).
+* El Formato del disco duro es [VDI](http://en.wikipedia.org/wiki/VirtualBox#Device_virtualization) o [VHD](http://en.wikipedia.org/wiki/VHD_(file_format)).
 
 Por lo tanto, si tenemos el disco en formato VMDK, hay que convertirlo primero a VDI. Para ello hay que:
 
@@ -23,4 +23,4 @@ Ya tenemos nuestro disco duro en formato VDI. Ahora hay que redimensionarlo. Par
 
 `VBoxManage modifyhd win.vdi --resize <tamaño_en_megabytes>`
 
-Por último sólo falta redimensionar la partición de Windows, usando [GParted](http://gparted.sourceforge.net/), por ejemplo.
+Por último sólo falta redimensionar la partición de Windows, usando [GParted](http://gparted.org/), por ejemplo.
